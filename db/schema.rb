@@ -10,8 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_19_165644) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_20_192037) do
   create_table "plants", force: :cascade do |t|
+    t.string "name"
+    t.string "latin_name"
+    t.string "light"
+    t.string "soil"
+    t.string "water"
+    t.string "temperature"
+    t.integer "humidity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_plants", force: :cascade do |t|
     t.string "name"
     t.string "latin_name"
     t.string "light"
